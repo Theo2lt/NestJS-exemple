@@ -26,8 +26,8 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t my-nestjs-app:latest .
-          docker tag my-nestjs-app:latest ${{ steps.login-ecr.outputs.registry }}/my-nestjs-app:latest
+          docker build -t nestjs:latest .
+          docker tag nestjs:latest ${{ steps.login-ecr.outputs.registry }}/nestjs:latest
 
       - name: Push Docker image to Amazon ECR
         run: |
